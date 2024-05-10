@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angency Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+        }
+
+        header .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-weight: 600;
+            font-size: 2.1rem;
+            text-decoration: none;
+        }
+
+        .navbar .logo span {
+            color: #DEA945;
+        }
+
+        .navbar .menu-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .navbar a:hover {
+            color: #DEA945;
+        }
+
+        #close-menu-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #hamburger-btn {
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            header.show-mobile-menu::before {
+                content: "";
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(5px);
+            }
+
+            .navbar .logo {
+                font-size: 1.7rem;
+            }
+
+
+            #hamburger-btn,
+            #close-menu-btn {
+                display: block;
+            }
+
+            .navbar .menu-links {
+                position: fixed;
+                top: 0;
+                left: -250px;
+                width: 250px;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                padding: 70px 40px 0;
+                transition: left 0.2s ease;
+            }
+
+            header.show-mobile-menu .navbar .menu-links {
+                left: 0;
+            }
+
+            .navbar a {
+                color: #000;
+            }
+
+            .hero-section .content {
+                text-align: center;
+            }
+
+            .hero-section .content :is(h2, p) {
+                max-width: 100%;
+            }
+
+            .hero-section .content h2 {
+                font-size: 2.3rem;
+                line-height: 60px;
+            }
+
+            .hero-section .content button {
+                padding: 9px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+          <a class="logo" href="#">Dream House<span>.</span></a>
+          <ul class="menu-links">
+            <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+            <li><a href="Index.html.html">Home</a></li>
+            <li><a href="About Us Page.html">About</a></li>
+            <li><a href="angency Website Blog Page.HTML">Blog</a></li>
+            <li><a href="Our Team.html">Our Team</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+          </ul>
+          <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+      </header>
+    <br /><br />
+    <br /><br />
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Picture 16.jpg" weight="1400" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>VILLAS AVAILABES</h5>
+                    <p>Beautiful Place paceful area and Expansive Areas in your City. So Contact Now!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Picture 12.webp" weight="1400" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>BANGLOWS AVAILABES</h5>
+                    <p>Beautiful Place paceful area and Expansive Areas in your City. So Contact Now!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Picture 15.jpg" weight="1400" height="600" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>HOUSES AVAILABES</h5>
+                    <p>Beautiful Place paceful area and Expansive Areas in your City. So Contact Now!</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 17.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </img>
+                    <div class="card-body">
+                        <p class="card-text">Beautiful Banglow<br />In Front Of Dolmen City, HC-3, sea view road, Marine
+                            Promenade, Karachi Pakistan
+                            Visit NOW!
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-dark"><a href="#Beglow1">Read More
+                                        About
+                                        BANGLOW</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 2.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </img>
+                    <div class="card-body">
+                        <p class="card-text">Khayaban-e-Rahat <br />Defence Housing Authority, Karachi, Karachi City,
+                            Sindh 75500</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-warning"><a href="#Beglow2"> Read
+                                        More About
+                                        BANGLOW</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 3.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">79 Zulfiqar Street 1, D.H.A. Phase 8 Zone B Phase 8 Defence Housing
+                            Authority, Karachi,
+                            Karachi City, Sindh 75500</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-info"><a href="#Beglow3">Read More
+                                        About
+                                        BANGLOW</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 4.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Khayaban-e-Qasim <br />D.H.A Phase 8 Defence Housing Authority, Karachi,
+                            Karachi City, Sindh 75500</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-danger"><a href="#Beglow4">Read More
+                                        About Simple
+                                        Beglow</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 5.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"Simple House"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">"Banjosa Lake"<br /> Availabe Azad Kashmir near Banjosa Lake. Azad Kashmir
+                            Pakistan</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-success"><a href="#Beglow5">Read
+                                        More About Simple
+                                        House</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 6.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Tariq Road<br />Your Dream House Has Just Became Availabe in Tariq Road
+                            Karachi Pakistan 75600.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="#Beglow6">Read
+                                        More About
+                                        BANGLOW</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 7.jpg" alt="">
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"Apartment"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Block 5<br />
+                            Bahria Town. In front Of Jamia Abu Bakar Masid Karachi Pakistan Visit NOW!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-dark"><a href="#Beglow7">Read More
+                                        About
+                                        Apartment</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 8.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"BANGLOW"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Tariq Road Block 2<br /> will come to mind.
+                            this block is one of Karachi oldest and most expensive residential districts.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-warning"><a href="#Beglow8">Read
+                                        More About
+                                        Apartment</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="Picture 9.jpg" alt="">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                        dy=".3em">"House"</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">Khayaban-e-Khaibar<br />
+                            Defence Housing Authority, Karachi, Karachi City, Sindh 75500</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-danger"><a href="#Beglow9">Read More
+                                        About
+                                        Apartment</a></button>
+                            </div>
+                            <small class="text-body-secondary">Agency</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="500" src="Picture 17.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>Beautiful BANGLOW</h1><br />
+                    <H4>In Front Of Dolmen City, HC-3, sea view road,
+                        Marine Promenade, Karachi Pakistan Visit NOW!
+                        <br />This Banglow To Make Best Way While Sale Cement. This Banglow has 5 Badrooms 4 Washrooms
+                        atagbath 1 TV loan 1 American Kitchan 2 Garig 1 Swiming Pool 1 Teris 1 Loan Also Availabe 3
+                        Guest Rooms.
+                    </H4>
+                    <h3>"Only on 4 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark" id="Beglow1">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow picture 1 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="500" src="Picture 2.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>BANGLOW</h1><br />
+                    <H4>Khayaban-e-Rahat
+                        Defence Housing Authority, Karachi, Karachi City, Sindh 75500
+                        <br />Pacefull area also expansive area in karachi City.<br />This Banglow To Make Nishat Miles
+                        Ltd Cement. This Banglow Downstairs has 2 Badrooms 1 TV Loan
+                        1 Launch 1 Open Kitchen 3 Bathrooms 2 Washrooms and Upstairs 3 Guest Rooms 3 atagbathroom Also 2
+                        Gerig In this Banglows.
+                    </H4>
+                    <h3>"Only on 5 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-warning" id="Beglow2">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 2 Book Now.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 3.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>BANGLOW</h1><br />
+                    <H4>79 Zulfiqar Street 1, D.H.A. Phase 8 Zone B Phase 8 Defence Housing Authority, Karachi, Karachi
+                        City, Sindh 75500
+                        <br />This Banglow To Make Lucky Cement. This Banglow Downstairs has 3 Rooms 2 Badrooms 1 TV
+                        Loan 1 American Kitchan 3 washroom atag bath 2 Giraj
+                        Upstairs 2 kids Rooms 2 Guest Rooms and 3 Washrooms 1 Bathrooms.
+                    </H4>
+                    <h3>"Only on 4 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-info" id="Beglow3">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 3 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 4.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>BANGLOW</h1><br />
+                    <H4>Khayaban-e-Qasim
+                        D.H.A Phase 8 Defence Housing Authority, Karachi, Karachi City, Sindh 75500
+                        <br />This Banglow To Make Kohinoor Cement Ltd. This Banglow Downstairs 1 Badroom 2 Rooms 1
+                        kitchen 2 Washrooms atag bath
+                        Upstairs 2 Guestrooms 2 washroom atag Bathrooms
+                    </H4>
+                    <h3>"Only on 1 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-danger" id="Beglow4">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 4 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 5.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"House"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>House</h1><br />
+                    <H4>"Banjosa Lake"
+                        Availabe Azad Kashmir near Banjosa Lake. Azad Kashmir Pakistan <br /> Its a Beautiful Place In
+                        Pakistan Like its your dream House. Its a Pacefull area in Pakistan
+                        <br />This House To Make Attock Cement Pakistan Ltd. This House has totaly 5 rooms 1 Tv Lunch 1
+                        Guest Room 3 Badrooms
+                        1 Open Kitchen and 3 Washrooms atag bath rooms.
+                    </H4>
+                    <h3>"Only on 80 Lakh"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-success" id="Beglow5">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 5 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 6.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>BANGLOW</h1><br />
+                    <H4>Tariq Road
+                        Your Dream House Has Just Became Availabe in Tariq Road Karachi Pakistan 75600.
+                        <br />This Banglow To Make Power Cement This Banglow has 7 Badrooms 8 Washrooms
+                        2 TV loan 2 American Kitchan 1 Garig 2 Swiming Pool 2 Teris 1 Loan Also Availabe 4
+                        Guest Rooms.
+                    </H4>
+                    <h3>"Only on 7 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="Beglow6">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 6 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 7.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>Apartment</h1><br />
+                    <H4>Block 5
+                        Bahria Town. In front Of Jamia Abu Bakar Masid Karachi Pakistan Visit NOW!
+                        <br />This Apartment Make to power Cement. This Apartment has 4 Badrooms 1 Tv loan 1 Open
+                        American Kitchen
+                        3 washroom atagbathroom.
+                    </H4>ss
+                    <h3>"Only on 90 Lakh"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark" id="Beglow7">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 7 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 8.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"BANGLOW"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>Beautiful BANGLOW</h1><br />
+                    <H4>Tariq Road Block 2
+                        will come to mind. this block is one of Karachi oldest and most expensive residential districts.
+                        <br />This Banglow To Make Best Way While Sale Cement. This Banglow has 5 Badrooms 4 Washrooms
+                        atagbath 1 TV loan 1 American Kitchan 2 Garig 1 Teris 1 Loan Also Availabe 3
+                        Guest Rooms.
+                    </H4>
+                    <h3>"Only on 2 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-warning" id="Beglow8">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 8 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="col">
+            <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="500px" height="600" src="Picture 9.jpg" alt="">
+                <title>Placeholder</title>
+                <rect width="500px" height="1400px" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                    dy=".3em">"House"</text>
+                </img>
+                <div class="card-body">
+                    <p class="card-text">
+                    <h1>House</h1><br />
+                    <H4>Khayaban-e-Khaibar
+                        Defence Housing Authority, Karachi, Karachi City, Sindh 75500
+                        <br />This House To Make Bestway Cement This House To Make Lucky Cement. This House Downstairs
+                        has 3 Rooms 2 Badrooms
+                        1 TV Loan 1 American Kitchan 3 washroom atag bath 2 Giraj Upstairs 2 kids Rooms 2 Guest Rooms
+                        and 3 Washrooms 1 Bathrooms.
+                    </H4>
+                    <h3>"Only on 2 Crore"</h3>
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-danger" id="Beglow9">Thank You</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-dark"><a href="Baglow Picture 9 Book Now!.html">BOOK NOW!</a></button>
+                        </div>
+                        <small class="text-body-secondary">Agency</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+            <p>We hope you like our Blog Page. We Use a Blog Page HTML CSS and<a
+                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap</a><br />Thank You.
+            </p>
+            <p class="mb-0">
+                <a href="#">Back to top</a><br />
+            <div class="container1">
+                <td style="padding:0 24px 36px 24px">
+                    <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                        style="background-color:#ffffff;border-radius:4px" style="align-items: center;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-right:16px">
+                                    <a href="#" target="_blank" data-saferedirecturl="#">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NaRf16UcwkD2dVty5nvfBDX60IWM6GVptI60MZ6oXWsvUGdaaFpdLYWgHesTVu-igMXJSaYFeAvEGDQTobn_z7ASfY-S5w3FJ7SVivkGKNX=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/instagram.png"
+                                            alt="Instagram" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td style="padding-right:16px">
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474764&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=c675405e040ec2641725a2ce7ec0cbaf1c8a4a6261bf1a47d57d93e57ad6ecc1"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474764%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3Dc675405e040ec2641725a2ce7ec0cbaf1c8a4a6261bf1a47d57d93e57ad6ecc1&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw0qCi8TkJXEvd_bvBJqjwP8">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_Nb6uPvVOQAimhomk9hRdMBtjEca6cyczG33zFKKG0VqL87DLS5Fw_O-rEvPPu8XSgLONyUa5ybBorMT33zKIwnW3zioatK__97dZMsg_g=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/youtube.png"
+                                            alt="Youtube" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td style="padding-right:16px">
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474767&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=981808b397d58097b316ad98b334825ff69f84f05584919dc127c44c217842d3"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474767%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3D981808b397d58097b316ad98b334825ff69f84f05584919dc127c44c217842d3&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw3hcZbbEcQg4LE8nHEThE7k">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NYnryWq9FBDvWtRv8koNk2EAku4G6MmxjLBEBpzllUxHJt-TJ5TaqGdLSnk6MtDm6kAZA-gXv-3hAhT_GMOV23BosggVfCfTM_fNWCuHuQ=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/facebook.png"
+                                            alt="Facebook" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474770&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=1c037c4fd05d7fcebcaf0809954c86a9cc505f7416e752ca10eb5e40d9624124"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474770%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3D1c037c4fd05d7fcebcaf0809954c86a9cc505f7416e752ca10eb5e40d9624124&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw20umDALYaUrKqYfdq_TIZO">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NYDxslM0NNyNpqmavFkdkXlflQjPELr4RJQjImr6pfgbzWZCMPnCuOD4Qpu1c3NUORUz5ACa4fzh5mhS7xz4JPrOOU5xfYcBQWoLKz0DUk=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/linkedin.png"
+                                            alt="Linkedin" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </div>
+            </p>
+        </footer>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+
+        closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    <header>
+</body>
+
+</html>

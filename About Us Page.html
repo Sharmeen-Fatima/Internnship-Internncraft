@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dream House About</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("../Angency\ Website\ Background\ Picture.jpg") no-repeat center center/cover;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: #DEA945;
+}
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #DEA945;
+}
+
+
+.about{
+    height: 100vh;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .main.img {
+    width: 580px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+.all-text{
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+.main{
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.all-text h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    color: #fafafa;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.all-text h1{
+    font-size: 45px;
+    color: #f8f4f4;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.all-text p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #f1f1f1;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+.btn button{
+    background: white;
+    padding: 20px 32px;
+    font-size: 16px;
+    color: #111111;
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px opx rgb(0 0 0/6%);
+    margin: 20px;
+}
+.btn button:hover{
+    background-color: #1d44f9;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn .btn2 {
+    background: #111111;
+    color: white;
+}
+@media screen and (max-width: 1250px){
+    .about{
+        width: 100;
+        height: auto;
+        padding: 60px 0;
+    }
+    .all-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 650px){
+  .about .main img{
+     margin-bottom: 35px;
+  }
+}
+    
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .review .box {
+        max-width: 100%;
+    }
+}
+.container{
+      text-align: center;
+    }
+    #close-menu-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #hamburger-btn {
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+
+      header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+      }
+
+      .navbar .logo {
+        font-size: 1.7rem;
+      }
+
+
+      #hamburger-btn,
+      #close-menu-btn {
+        display: block;
+      }
+
+      .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+      }
+
+      header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+      }
+
+      .navbar a {
+        color: #000;
+      }
+
+      .hero-section .content {
+        text-align: center;
+      }
+
+      .hero-section .content :is(h2, p) {
+        max-width: 100%;
+      }
+
+      .hero-section .content h2 {
+        font-size: 2.3rem;
+        line-height: 60px;
+      }
+
+      .hero-section .content button {
+        padding: 9px 18px;
+      }
+    }
+
+
+</style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#">Dream House<span>.</span></a>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+                <li><a href="Index.html.html">Home</a></li>
+                <li><a href="About Us Page.html">About</a></li>
+                <li><a href="angency Website Blog Page.HTML">Blog</a></li>
+                <li><a href="Our Team.html">Our Team</a></li>
+                <li><a href="Contact Us.html">Contact</a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+    </header>
+    <section class="About">
+        <div class="main">
+            <!-- <img src="imge-removebg-preview.png"> -->
+            <img src="Picture 15.jpg">
+            <div class="all-text">
+                <h4>About Us</h4>
+                <h1>A house of Creative & Intelligent </h1>
+                <p> Welcome to Dream House, where we transform aspirations
+                    into addresses! At Dream House, our mission is to
+                    redefine the journey of finding your perfect home. With
+                    a commitment to personalized service, innovative solutions,
+                    and unwavering transparency, we go beyond being an agency;
+                    we are your partners in crafting the story of your dream
+                    residence. Our focus on community and a seamless,
+                    transparent process ensures that every step of your
+                    home-seeking adventure is met with trust and excitement.
+                    Join us at Dream Residence, where every dream finds its
+                    unique home, and the journey to your ideal residence begins!
+                </p>
+                <div class="btn">
+                    <button type="button"
+                    onclick="alert('Thank you For Visit')"> Thanks For Visit 
+                    <button type="button" onclick="alert('Thank You For Visit We Hope You Came Again')" class="btn2">Come Again</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+                <p class="mb-0">
+                    <!-- <a href="#">Back to top</a><br /> -->
+                <div class="container1">
+                    <td style="padding:0 24px 36px 24px">
+                        <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                            style="background-color:#ffffff;border-radius:4px" style="align-items: center;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right:16px">
+                                        <a href="#" target="_blank" data-saferedirecturl="#">
+                                            <!-- <img src="imge-removebg-preview"> -->
+                                            
+    </section>
+</body>
+
+</html>
